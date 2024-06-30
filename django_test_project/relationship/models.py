@@ -46,3 +46,14 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Profile(models.Model):
+    employee = models.OneToOneField(
+        Employee, on_delete=models.CASCADE, related_name="profile"
+    )
+    bio = models.TextField()
+    birth_date = models.DateField()
+
+    def __str__(self):
+        return f"profile {self.employee.first_name}"

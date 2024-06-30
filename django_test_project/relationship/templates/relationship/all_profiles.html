@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="container">
+        <h1>All profiles</h1>
+
+        {% for profile in profiles %}
+            <div>{{ profile.employee.first_name }}</div>
+            <div>{{ profile.employee.last_name }}</div>
+
+            <div>{{ profile.bio }}</div>
+            <div>{{ profile.age }}</div>
+            <br>
+        {% endfor %}
+    </main>
+{% endblock content %}
