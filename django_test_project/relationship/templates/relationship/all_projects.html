@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="container">
+        <h1>All projects</h1>
+
+        {% for project in projects %}
+            <div>Project name: {{ project.name }}</div>
+
+            {% for employee in project.employees.all %}
+                <div>{{ employee.first_name }}</div>
+                <div>{{ employee.last_name }}</div>
+                <br>
+            {% endfor %}
+        {% endfor %}
+    </main>
+{% endblock content %}

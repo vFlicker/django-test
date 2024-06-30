@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from django_test_project.relationship.models import Profile
+from ..models import Profile
 
 
 def all_profiles(request):

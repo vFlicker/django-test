@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from django_test_project.relationship.models import Employee
+from ..models import Employee
 
 
 def all_employees(request):
