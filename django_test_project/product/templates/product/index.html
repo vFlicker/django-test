@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="container">
+        <h1>Django test project</h1>
+
+        {% for product in products %}
+            <div class="card">
+                <div>{{ product.name }}</div>
+                <div>{{ product.category }}</div>
+                <div>{{ product.price }}</div>
+            </div>
+            <br>
+        {% endfor %}
+    </main>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="container">
+        <h1>All employees</h1>
+
+        {% for employee in employees %}
+            <div>{{ employee.city.name }}</div>
+            <br>
+        {% endfor %}
+    </main>
+{% endblock content %}
